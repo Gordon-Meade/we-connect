@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-w2qv&r4lu5f&a&#*yi2u*o!$y+c3f98o%+ls#3sm2-tj%ujp(-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://8000-piyads-weconnect-r4vi6dt0agu.ws-eu108.gitpod.io/','http://8000-gordonmeade-weconnect-0hef7y3py4j.ws-eu108.gitpod.io/','https://5432-mel0dramat1c-weconnect-52xeszz068c.ws-eu108.gitpod.io/','8000-piyads-weconnect-r4vi6dt0agu.ws-eu108.gitpod.io','.herokuapp.com']
+ALLOWED_HOSTS = ['.gitpod.io','.herokuapp.com']
 
 
 # Application definition
