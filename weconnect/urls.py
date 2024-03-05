@@ -16,13 +16,13 @@ Including another URLconf
 """
 from django_summernote import urls as summernote_urls
 from django_summernote import urls as summernote_urls
-from django_summernote import urls as summernote_urls
 from django.contrib import admin
 from django.urls import path, include
 from django.urls import path, include
 from event.views import my_event
 
 urlpatterns = [
+    path('summernote/', include('django_summernote.urls')),
     path('summernote/', include('django_summernote.urls')),
     path('summernote/', include('django_summernote.urls')),
     path('summernote/', include('django_summernote.urls')),
