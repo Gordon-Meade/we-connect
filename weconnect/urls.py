@@ -17,10 +17,11 @@ Including another URLconf
 from django_summernote import urls as summernote_urls
 from django.contrib import admin
 from django.urls import path, include
-from event.views import my_event
+from event.views import MyEventView
 
 urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('admin/', admin.site.urls),
-    path('event/', my_event, name='event'),
+    path('my_event/', MyEventView.as_view(), name='my_event'),
 ]
+
