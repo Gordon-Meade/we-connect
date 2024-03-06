@@ -29,7 +29,9 @@ SECRET_KEY = 'django-insecure-w2qv&r4lu5f&a&#*yi2u*o!$y+c3f98o%+ls#3sm2-tj%ujp(-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = ['http://8000-piyads-weconnect-r4vi6dt0agu.ws-eu108.gitpod.io/','http://8000-gordonmeade-weconnect-0hef7y3py4j.ws-eu108.gitpod.io/','https://5432-mel0dramat1c-weconnect-52xeszz068c.ws-eu108.gitpod.io/','8000-piyads-weconnect-r4vi6dt0agu.ws-eu108.gitpod.io','.herokuapp.com']
+
 
 
 # Application definition
@@ -41,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_summernote',
     'event',
 ]
 
@@ -89,10 +92,12 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
+
 CSRF_TRUSTED_ORIGINS = [
     "https://*.gitpod.io",
     "https://*.herokuapp.com"
 ]
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -132,5 +137,22 @@ STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
+
+SUMMERNOTE_CONFIG = {
+    'iframe': True,  # Set True to use iframe instead of textarea
+    'summernote': {
+        'width': '100%',  # Set editor width
+        'height': '480',  # Set editor height
+        'toolbar': [
+            ['style', ['style']],
+            ['font', ['bold', 'italic', 'underline', 'clear']],
+            ['fontname', ['fontname']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['link', 'picture', 'video']],
+            ['view', ['fullscreen', 'codeview']],
+        ],
+    },
+}
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
