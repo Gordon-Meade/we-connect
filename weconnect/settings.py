@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -106,8 +107,8 @@ CSRF_TRUSTED_ORIGINS = [
 >>>>>>> cabc0fa (Create Event App)
 =======
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.gitpod.io",
-    "https://*.herokuapp.com"
+    "https://*.herokuapp.com",
+    "http://8000-gordonmeade-weconnect-0hef7y3py4j.ws-eu108.gitpod.io"
 ]
 
 >>>>>>> 5894c04 (super user created)
