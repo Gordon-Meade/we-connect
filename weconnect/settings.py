@@ -48,11 +48,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-<<<<<<< HEAD
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-=======
->>>>>>> 0ff24f9 (Create Event App)
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -96,21 +91,16 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 CSRF_TRUSTED_ORIGINS = [
-<<<<<<< HEAD
-    "https://*.herokuapp.com",
-    "http://8000-gordonmeade-weconnect-0hef7y3py4j.ws-eu108.gitpod.io"
-=======
+
     "https://*.gitpod.io",
+    "http://8000-gordonmeade-weconnect-0hef7y3py4j.ws-eu108.gitpod.io"
     "https://*.herokuapp.com"
->>>>>>> 5894c04 (super user created)
 ]
 
-=======
->>>>>>> cabc0fa (Create Event App)
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
