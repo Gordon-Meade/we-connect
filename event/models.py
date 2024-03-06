@@ -1,4 +1,4 @@
-from django_summernote.fields import SummernoteTextField
+# from django_summernote.fields import SummernoteTextField
 from django.db import models
 
 # Create your models here.
