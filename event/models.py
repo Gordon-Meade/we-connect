@@ -1,7 +1,7 @@
-from django_summernote.fields import SummernoteTextField
+# from django_summernote.fields import SummernoteTextField
 from django.db import models
 
-RATING = ((1, "Highly Dissatisfied"), (2, "Dissatisfied"),(3,"Neutral"),(4,"Satisfied")(5,"Highly Satisfied"))
+# RATING = ((1, "Highly Dissatisfied"), (2, "Dissatisfied"),(3,"Neutral"),(4,"Satisfied")(5,"Highly Satisfied"))
 
 # Create your models here.
 class Event(models.Model):
@@ -12,11 +12,11 @@ class Event(models.Model):
     keywords = models.CharField(max_length=255, blank=True, null=True)
     max_participation = models.PositiveIntegerField(blank=True, null=True)
     event_type = models.CharField(max_length=50, blank=True, null=True)
-    review = models.TextField(blank=True, null=True)
-    rating = models.PositiveIntegerField(blank=True, null=True)
+    # review = models.TextField(blank=True, null=True)
+    # rating = models.PositiveIntegerField(blank=True, null=True)
 
-     class Meta:
-        ordering = ["-date"]
+    #  class Meta:
+    #     ordering = ["-date"]
 
     def __str__(self):
         return self.title

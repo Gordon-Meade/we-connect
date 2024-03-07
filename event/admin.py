@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Event, Review
+from .models import Event
+# from .models import Review
 from django_summernote.admin import SummernoteModelAdmin
 
 # Register your models here.

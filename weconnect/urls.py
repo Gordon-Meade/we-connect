@@ -13,21 +13,19 @@ Class-based views
 Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+
 """
-
-from django_summernote import urls as summernote_urls
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
-
 from django.urls import path, include
-from event.views import ListView
-from event.views import MyEventView 
+from .views import EventListView, EventDetailView, MyEventView
 
 urlpatterns = [
-    path('summernote/', include('django_summernote.urls')),
-    path('summernote/', include('django_summernote.urls')),
-    path('summernote/', include('django_summernote.urls')),
-    path('summernote/', include('django_summernote.urls')),
     path('admin/', admin.site.urls),
-    path('my_event/', MyEventView.as_view(), name='my_event'),
+    path('event_list/', EventListView.as_view(), name='event-list'),
+    path('event_detail/<int:pk>/', EventDetailView.as_view(), name='event-detail'),
+    path('my_event/', MyEventView.as_view(), name='my-event'),
 ]
 
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
