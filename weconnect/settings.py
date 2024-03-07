@@ -38,6 +38,7 @@ ALLOWED_HOSTS = ['http://8000-piyads-weconnect-r4vi6dt0agu.ws-eu108.gitpod.io/',
 
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -49,11 +50,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'weconnect',
     'event',
-    # 'django_summernote',
+    'django_summernote',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -100,9 +102,6 @@ DATABASES = {
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.gitpod.io",
-
-    "http://8000-gordonmeade-weconnect-0hef7y3py4j.ws-eu108.gitpod.io",
-
     "https://*.herokuapp.com"
 ]
 
