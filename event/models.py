@@ -10,8 +10,7 @@ class Event(models.Model):
     keywords = models.CharField(max_length=255, blank=True, null=True)
     max_participation = models.PositiveIntegerField(blank=True, null=True)
     event_type = models.CharField(max_length=50, blank=True, null=True)
-    review = models.TextField(blank=True, null=True)
-    rating = models.PositiveIntegerField(blank=True, null=True)
+    
 
     def __str__(self):
         return self.title
