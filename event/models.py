@@ -1,4 +1,4 @@
-# from django_summernote.fields import SummernoteTextField
+from django_summernote.fields import SummernoteTextField
 from django.db import models
 
 # RATING = ((1, "Highly Dissatisfied"), (2, "Dissatisfied"),(3,"Neutral"),(4,"Satisfied")(5,"Highly Satisfied"))
@@ -15,8 +15,8 @@ class Event(models.Model):
     # review = models.TextField(blank=True, null=True)
     # rating = models.PositiveIntegerField(blank=True, null=True)
 
-    #  class Meta:
-    #     ordering = ["-date"]
+    class Meta:
+       ordering = ["-date"]
 
     def __str__(self):
         return self.title
@@ -32,7 +32,7 @@ class Event(models.Model):
 #     approved = models.BooleanField(default=False)
 #     created_on = models.DateTimeField(auto_now_add=True)
 
-#      class Meta:
+#     class Meta:
 #         ordering = ["-rating"]
 
 #     def __str__(self):
