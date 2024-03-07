@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url
+# import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
@@ -29,12 +29,12 @@ SECRET_KEY = 'django-insecure-w2qv&r4lu5f&a&#*yi2u*o!$y+c3f98o%+ls#3sm2-tj%ujp(-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
+
 
 ALLOWED_HOSTS = ['http://8000-piyads-weconnect-r4vi6dt0agu.ws-eu108.gitpod.io/','http://8000-gordonmeade-weconnect-0hef7y3py4j.ws-eu108.gitpod.io/','https://5432-mel0dramat1c-weconnect-52xeszz068c.ws-eu108.gitpod.io/','8000-piyads-weconnect-r4vi6dt0agu.ws-eu108.gitpod.io','.herokuapp.com']
-=======
-ALLOWED_HOSTS = ['.gitpod.io','.herokuapp.com']
->>>>>>> 79b4b8e (Base.HTML is ready and Favicon is installed)
+
+
+
 
 
 
@@ -100,10 +100,9 @@ DATABASES = {
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.gitpod.io",
-<<<<<<< HEAD
-=======
+
     "http://8000-gordonmeade-weconnect-0hef7y3py4j.ws-eu108.gitpod.io",
->>>>>>> 79b4b8e (Base.HTML is ready and Favicon is installed)
+
     "https://*.herokuapp.com"
 ]
 
